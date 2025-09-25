@@ -48,6 +48,22 @@
                 echo "El tipo de la variable \$variableBool2 es: <br>";
                 var_dump($variableBool2);
 
+                //Array simples:
+                $cars = array("Volvo", "BMW", "Toyota"); //Como si fuese una caja. La primera marca está en la posición 0.
+                echo "<br><br><br>";
+                echo "El coche que está en la posición 2 del array es: " . $cars[2]; //Pido que indique el coche de la posición 2 (Toyota).
+
+                /*Ejemplo de Array:
+                $alumno = array(nombre, apellido1, apellido2, edad(entero), calificacion(decimal), aprobado(booleano));
+                Después de definir el array, se imprimirá con un echo. */
+
+                echo "<br><br><br>";
+                $alumno = array("Francisco", "García", "Carmona", 25, 8.5, true);
+                echo "El alumno " . $alumno[0] . " " . $alumno[1] . " ha aprobado con " . $alumno[3] . " años.";
+                echo "<br><br>";
+                $fruta = array("manzana", 1.85, 1);
+                echo "La " . $fruta[0] . " está a " . $fruta[1] . "€ el kilo.";
+
             //Fin del código de PHP.
             ?>
     </body>
