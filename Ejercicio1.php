@@ -61,6 +61,8 @@
                 $alumno = array("Francisco", "García", "Carmona", 25, 8.5, true);
                 echo "El alumno " . $alumno[0] . " " . $alumno[1] . " ha aprobado con " . $alumno[3] . " años.";
                 echo "<br><br>";
+
+                //Ejercicio 4: Array
                 $fruta = array("manzana", 1.85, 1);
                 echo "La " . $fruta[0] . " está a " . $fruta[1] . "€ el kilo.";
 
