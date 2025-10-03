@@ -69,7 +69,8 @@
                 echo "Mi compra ha costado " . $fruta[1] * $fruta[2] . "€."; //Con el asterisco (*) se multiplica.
                 
                 //Operadores aritméticos:
-                /* + Suma 5 + 3 = 8
+                /* 
+                   + Suma 5 + 3 = 8
                    - Resta 5 - 3 = 2
                    * Multiplicación 5 * 3 = 15
                    / División  5 / 3 = 1.6666
@@ -79,7 +80,8 @@
                 */
 
                 //Operadores de comparación:
-                /* = Asignación (asigna el valor 5 a la variable x) $x = 5
+                /* 
+                   = Asignación (asigna el valor 5 a la variable x) $x = 5
                    == Igualdad (compara si son iguales) 5 == 3 = false
                    === Idéntico (compara si son iguales y del mismo tipo) 5 === 3 = false || 5 === 5 = true
                    != Diferente (compara si son diferentes) 5 != 3 = true
@@ -89,8 +91,148 @@
                    < Menor que... 5 < 3 = false
                    >= Mayor o igual que... 5 >= 3 = true
                    <= Menor o igual que... 5 <= 3 = false
-                */
 
+                   Existe un operador adicional para comparar 2 variables, sin tener que ecribir 3 posibles
+                   comparaciones. Es el operador <=> (spaceship).
+                */
+                
+                //Condicionales:
+                /* 
+                   if (condición) {
+                       //Código a ejecutar si la condición es verdadera.
+                   } else {
+                       //Código a ejecutar si la condición es falsa.
+                   }
+                     elseif (condición) {
+                          //Código a ejecutar si la condición es verdadera.
+                     } else {
+                          //Código a ejecutar si la condición es falsa.
+                        }
+                */
+                echo "<br><br>";
+
+                //Ejemplo de condicional:
+                $edadAlumno = 20;
+                $edadPadre = 48;
+
+                if ($edadAlumno >= 18) {
+                    echo "El alumno es mayor de edad y puede salir del instituto en el recreo.";
+                }else {
+                    echo "El alumno es menor de edad y no puede salir del instituto en el recreo.";
+                }
+
+                echo "<br><br>";
+
+                if ($edadAlumno >= 18 && $edadAlumno < 35) {
+                    echo "El alumno es mayor de edad y puede solicitar becas.";
+                } else {
+                    echo "El alumno no puede solicitar becas porque es menor de edad o tiene más de 35 años.";
+                }
+
+                echo "<br><br>";
+
+                //Ejercicio 5: práctica de array + condicionales.
+                $notas = array(5,3,2,7,10,9,8,2,4);
+                $aprobados = 0;
+                $suspensos = 0;
+
+                echo "<br><br>";
+
+                if ($notas[0] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[1] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[2] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[3] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[4] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[5] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[6] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[7] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                if ($notas[8] >= 5) {
+                    $aprobados++;
+                } else {
+                    $suspensos++;
+                }
+                echo "El número de aprobados es " . $aprobados . " y el número de suspensos es " . $suspensos . ".";
+                echo "<br><br>";
+
+                $media = ($notas[0] + $notas[1] + $notas[2] + $notas[3] + $notas[4] + $notas[5] + $notas[6] + $notas[7] + $notas[8]) / 9;
+
+                if ($media < 5) {
+                    echo "La media de las notas sale SUSPENSO.";
+                } elseif ($media >= 5 && $media < 7) {
+                    echo "La media de las notas sale APROBADO.";
+                } elseif ($media >= 7 && $media < 9) {
+                    echo "La media de las notas sale NOTABLE.";
+                } else {
+                    echo "La media de las notas sale SOBRESALIENTE.";
+                }
+
+                echo "<br><br>";
+
+                //Ejercicio 6: práctica de array + condicionales + operadores ariméticos.
+                $precioKg = array(10,11.3,1.28,4.7,2);
+
+                if ($precioKg[0] >=4) {
+                    $precioKg[0] = $precioKg[0] - ($precioKg[0] * 0.1); //Si el precio es mayor o igual a 4, se le aplica un descuento del 10%.
+                } else {
+                    $precioKg[0] = $precioKg[0] + ($precioKg[0] * 0.05); //Si es menor a 4, se le aplica un incremento del 5%.
+                }
+                if ($precioKg[1] >=4) {
+                    $precioKg[1] = $precioKg[1] - ($precioKg[1] * 0.1);
+                } else {
+                    $precioKg[1] = $precioKg[1] + ($precioKg[1] * 0.05);
+                }
+                if ($precioKg[2] >=4) {
+                    $precioKg[2] = $precioKg[2] - ($precioKg[2] * 0.1);
+                } else {
+                    $precioKg[2] = $precioKg[2] + ($precioKg[2] * 0.05);
+                }
+                if ($precioKg[3] >=4) {
+                    $precioKg[3] = $precioKg[3] - ($precioKg[3] * 0.1);
+                } else {
+                    $precioKg[3] = $precioKg[3] + ($precioKg[3] * 0.05);
+                }
+                if ($precioKg[4] >=4) {
+                    $precioKg[4] = $precioKg[4] - ($precioKg[4] * 0.1);
+                } else {
+                    $precioKg[4] = $precioKg[4] + ($precioKg[4] * 0.05);
+                }
+
+                echo "El nuevo precio de la manzana es: " . $precioKg[0] . "€/kg.";
+                echo "<br><br>";
+
+                
             //Fin del código de PHP.
             ?>
     </body>
