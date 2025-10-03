@@ -63,8 +63,33 @@
                 echo "<br><br>";
 
                 //Ejercicio 4: Array
-                $fruta = array("manzana", 1.85, 1);
+                $fruta = array("manzana", 1.85, 3);
                 echo "La " . $fruta[0] . " está a " . $fruta[1] . "€ el kilo.";
+                echo "<br><br>";
+                echo "Mi compra ha costado " . $fruta[1] * $fruta[2] . "€."; //Con el asterisco (*) se multiplica.
+                
+                //Operadores aritméticos:
+                /* + Suma 5 + 3 = 8
+                   - Resta 5 - 3 = 2
+                   * Multiplicación 5 * 3 = 15
+                   / División  5 / 3 = 1.6666
+                   % Módulo (resto de una división) 5 % 3 = 2
+                   ++ Incremento (suma 1) 5++ = 6
+                   -- Decremento (resta 1) 5-- = 4
+                */
+
+                //Operadores de comparación:
+                /* = Asignación (asigna el valor 5 a la variable x) $x = 5
+                   == Igualdad (compara si son iguales) 5 == 3 = false
+                   === Idéntico (compara si son iguales y del mismo tipo) 5 === 3 = false || 5 === 5 = true
+                   != Diferente (compara si son diferentes) 5 != 3 = true
+                   <> Diferente (compara si son diferentes) 5 <> 3 = true
+                   !== No idéntico (compara si son diferentes o no del mismo tipo) 5 !== 3 = true
+                   > Mayor que... 5 > 3 = true
+                   < Menor que... 5 < 3 = false
+                   >= Mayor o igual que... 5 >= 3 = true
+                   <= Menor o igual que... 5 <= 3 = false
+                */
 
             //Fin del código de PHP.
             ?>
