@@ -232,7 +232,24 @@
                 echo "El nuevo precio de la manzana es: " . $precioKg[0] . "€/kg.";
                 echo "<br><br>";
 
-                
+                //Switch:
+
+                //Loops: While
+                $i = 1;
+                while ($i < 6){ //Mientras que i sea menor que 6, se ejecuta el código.
+                    echo $i;
+                    echo "<br>";
+                    $i++;
+                }
+                echo "<br><br>";
+
+                //Loops: Do...While
+                do {
+                    echo $i;
+                    echo "<br>";
+                    $i++;
+                } while ($i < 6); //Se ejecuta el código al menos una vez, y luego se comprueba la condición.
+
             //Fin del código de PHP.
             ?>
     </body>
