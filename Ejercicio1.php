@@ -200,6 +200,71 @@
 
                 echo "<br><br>";
 
+                //Ejercicio 5.5: práctica de array + loops.
+                //While:
+                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP WHILE";
+                echo "<br>";
+                //Inicializo las variables:
+                $n = 0;
+                $aprobados = 0;
+                $suspensos = 0;
+
+                while ($n < count($notas)) {
+                    if ($notas[$n] >= 5) {
+                        $aprobados++;
+                    } else {
+                        $suspensos++;
+                    }
+                    $n++; //Incremento la variable n en 1 para que no se quede en un bucle infinito
+                }
+
+                echo "El número de aprobados es " . $aprobados . ".";
+                echo "<br>";
+                echo "El número de suspensos es " . $suspensos . ".";
+                echo "<br><br>";
+
+                //Do...While:
+                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP DO...WHILE";
+                echo "<br>";
+
+                $n = 0;
+                $aprobados = 0;
+                $suspensos = 0;
+
+                do {
+                    if ($notas[$n] >= 5) {
+                        $aprobados++;
+                    } else {
+                        $suspensos++;
+                    }
+                    $n++; //Incremento la variable n en 1 para que no se quede en un bucle infinito
+                } while ($n < count($notas));
+                
+                echo "El número de aprobados es " . $aprobados . ".";
+                echo "<br>";
+                echo "El número de suspensos es " . $suspensos . ".";
+                echo "<br><br>";
+
+                //For:
+                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP FOR";
+                echo "<br>";
+
+                $aprobados = 0;
+                $suspensos = 0;
+
+                for ($n = 0; $n < count($notas); $n++) {
+                    if ($notas[$n] >= 5) {
+                        $aprobados++;
+                    } else {
+                        $suspensos++;
+                    }
+                }
+
+                echo "El número de aprobados es " . $aprobados . ".";
+                echo "<br>";
+                echo "El número de suspensos es " . $suspensos . ".";
+                echo "<br><br>";
+
                 //Ejercicio 6: práctica de array + condicionales + operadores ariméticos.
                 $precioKg = array(10,11.3,1.28,4.7,2);
 
@@ -237,6 +302,7 @@
                 //Loops: While
                 $i = 1;
                 while ($i < 6){ //Mientras que i sea menor que 6, se ejecuta el código.
+                    echo "Estoy en un bucle while y el valor de i es: ";
                     echo $i;
                     echo "<br>";
                     $i++;
@@ -245,11 +311,23 @@
 
                 //Loops: Do...While
                 do {
+                    echo "Estoy en un bucle do...while y el valor de i es: ";
                     echo $i;
                     echo "<br>";
                     $i++;
                 } while ($i < 6); //Se ejecuta el código al menos una vez, y luego se comprueba la condición.
+                echo "<br><br>";
 
+                //Loops: For
+                for ($i = 0; $i < 6; $i++){ //Desde i=0, mientras i sea menor que 6, se incrementa i en 1.
+                    echo "Estoy en un bucle for y el valor de i es: ";
+                    echo $i;
+                    echo "<br>";
+                    //No es necesario poner $i++ dentro del bucle, porque ya se pone en la definición del for.
+                }
+                echo "<br><br>";
+
+                //Loops: Foreach
             //Fin del código de PHP.
             ?>
     </body>
