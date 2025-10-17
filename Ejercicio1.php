@@ -202,7 +202,7 @@
 
                 //Ejercicio 5.5: práctica de array + loops.
                 //While:
-                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP WHILE";
+                echo "EJERCICIO 5.1 - PRÁCTICA DE ARRAY + LOOP WHILE";
                 echo "<br>";
                 //Inicializo las variables:
                 $n = 0;
@@ -224,7 +224,7 @@
                 echo "<br><br>";
 
                 //Do...While:
-                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP DO...WHILE";
+                echo "EJERCICIO 5.2 - PRÁCTICA DE ARRAY + LOOP DO...WHILE";
                 echo "<br>";
 
                 $n = 0;
@@ -246,7 +246,7 @@
                 echo "<br><br>";
 
                 //For:
-                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP FOR";
+                echo "EJERCICIO 5.3 - PRÁCTICA DE ARRAY + LOOP FOR";
                 echo "<br>";
 
                 $aprobados = 0;
@@ -263,6 +263,52 @@
                 echo "El número de aprobados es " . $aprobados . ".";
                 echo "<br>";
                 echo "El número de suspensos es " . $suspensos . ".";
+                echo "<br><br>";
+
+                //While (hacer media de las notas):
+                echo "EJERCICIO 5.4 - PRÁCTICA DE ARRAY + LOOP WHILE (MEDIA DE NOTAS)";
+                echo "<br>";
+
+                $n = 0;
+                $sumaNotas = 0;
+
+                while ($n < count($notas)) {
+                    $sumaNotas = $sumaNotas + $notas[$n];
+                    $n++;
+                }
+                $media = $sumaNotas / count($notas);
+
+                echo "La media de las notas es: " . $media . ".";
+                echo "<br><br>";
+
+                //Do...While (hacer media de las notas):
+                echo "EJERCICIO 5.5 - PRÁCTICA DE ARRAY + LOOP DO...WHILE (MEDIA DE NOTAS)";
+                echo "<br>";
+
+                $n = 0;
+                $sumaNotas = 0;
+
+                do{
+                    $sumaNotas = $sumaNotas + $notas[$n];
+                    $n++;
+                }while ($n < count($notas));
+
+                $media = $sumaNotas / count($notas);
+                echo "La media de las notas es: " . $media . ".";
+                echo "<br><br>";
+
+                //For (hacer media de las notas):
+                echo "EJERCICIO 5.6 - PRÁCTICA DE ARRAY + LOOP FOR (MEDIA DE NOTAS)";
+                echo "<br>";
+
+                $sumaNotas = 0;
+
+                for($n = 0; $n < count($notas); $n++){
+                    $sumaNotas = $sumaNotas + $notas[$n];
+                }
+
+                $media = $sumaNotas / count($notas);
+                echo "La media de las notas es: " . $media . ".";
                 echo "<br><br>";
 
                 //Ejercicio 6: práctica de array + condicionales + operadores ariméticos.
@@ -295,6 +341,87 @@
                 }
 
                 echo "El nuevo precio de la manzana es: " . $precioKg[0] . "€/kg.";
+                echo "<br><br>";
+
+                //Loop While:
+                echo "EJERCICIO 6.1 - PRÁCTICA DE ARRAY  + LOOP WHILE";
+                echo "<br>";
+                $f = 0;
+                while ($f < count($precioKg)) {
+                    if ($precioKg[$f] >=4) {
+                        $precioKg[$f] = $precioKg[$f] - ($precioKg[$f] * 0.1);
+                    } else {
+                        $precioKg[$f] = $precioKg[$f] + ($precioKg[$f] * 0.05);
+                    }
+                    echo "El precio de la fruta es " . $precioKg[$f] . "€/kg.";
+                    echo "<br>";
+                    $f++;
+                }
+                echo "<br><br>";
+
+                //Loop Do...While:
+                echo "EJERCICIO 6.2 - PRÁCTICA DE ARRAY  + LOOP DO...WHILE";
+                echo "<br>";
+                $f = 0;
+                do {
+                    if ($precioKg[$f] >=4) {
+                        $precioKg[$f] = $precioKg[$f] - ($precioKg[$f] * 0.1);
+                    } else {
+                        $precioKg[$f] = $precioKg[$f] + ($precioKg[$f] * 0.05);
+                    }
+                    echo "El precio de la fruta es " . $precioKg[$f] . "€/kg.";
+                    echo "<br>";
+                    $f++;
+                } while ($f < count($precioKg));
+                echo "<br><br>";
+
+                //Loop For:
+                echo "EJERCICIO 6.3 - PRÁCTICA DE ARRAY  + LOOP FOR";
+                echo "<br>";
+                for ($f = 0; $f < count($precioKg); $f++) {
+                    if ($precioKg[$f] >=4) {
+                        $precioKg[$f] = $precioKg[$f] - ($precioKg[$f] * 0.1);
+                    } else {
+                        $precioKg[$f] = $precioKg[$f] + ($precioKg[$f] * 0.05);
+                    }
+                    echo "El precio de la fruta es " . $precioKg[$f] . "€/kg.";
+                    echo "<br>";
+                }
+                echo "<br><br>";
+
+                //Ejercicio 7: Comprobar si el año es bisiesto o no.
+                echo "EJERCICIO 7 - PRÁCTICA DE LOOPS (AÑOS BISIESTOS)";
+                echo "<br>";
+
+                $anno = array(2000, 2003, 2011, 2016, 2020);
+                $a = 0;
+
+                while($a < count($anno)){ //Si el año es divisible entre 4 y el resto da 0 y no entre 100 y que el resto de 0, o es divisible entre 400.
+                    if(($anno[$a] % 4 == 0 && $anno[$a] % 100 != 0) || ($anno[$a] % 400 == 0)){ 
+                        echo "El año " . $anno[$a] . " es bisiesto.";
+                    }else{
+                        echo "El año " . $anno[$a] . " no es bisiesto.";
+                    }
+                    echo "<br>";
+                    $a++;
+                }
+                echo "<br><br>";
+
+                //Ejercicio 7.1: Imprimir la lista de los 100 primeros nº pares.
+                echo "EJERCICIO 7.1 - PRÁCTICA DE LOOPS (100 PRIMEROS NÚMEROS PARES)";
+                echo "<br>";
+
+                $numPares = array();
+                for($i = 0; $i < 200; $i++){ //Desde 0 hasta 199.
+                    if($i % 2 == 0){ //Si el número es divisible entre 2 y el resto da 0, es par.
+                        $numPares[] = $i; //Se añade el número par al array.
+                    }
+                }
+                
+                echo "Los 100 primeros números pares son: <br>";
+                for($i = 0; $i < count($numPares); $i++){
+                    echo $numPares[$i] . " "; //Se imprime cada número par seguido de un espacio.
+                }
                 echo "<br><br>";
 
                 //Switch:
