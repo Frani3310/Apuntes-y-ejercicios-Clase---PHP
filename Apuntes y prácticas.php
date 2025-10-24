@@ -13,7 +13,7 @@
                 $nombre = "Fran"; //Esto es una variable de texto, que siempre van entre comillas.
                 $ciudad = "Écija";
 
-                //Ejercicio 3: Variables
+                //Ejercicio: Variables
                 echo "<br><br><br>"; //Esto es un salto de línea.
                 echo "El valor de mi variable txt es: ".$txt; //El punto (.) sirve para concatenar todo, una cosa tras otras.
                 echo "<br><br><br>";
@@ -62,7 +62,7 @@
                 echo "El alumno " . $alumno[0] . " " . $alumno[1] . " ha aprobado con " . $alumno[3] . " años.";
                 echo "<br><br>";
 
-                //Ejercicio 4: Array
+                //Ejercicio: Array
                 $fruta = array("manzana", 1.85, 3);
                 echo "La " . $fruta[0] . " está a " . $fruta[1] . "€ el kilo.";
                 echo "<br><br>";
@@ -131,7 +131,7 @@
 
                 echo "<br><br>";
 
-                //Ejercicio 5: práctica de array + condicionales.
+                //Ejercicio: práctica de array + condicionales.
                 $notas = array(5,3,2,7,10,9,8,2,4);
                 $aprobados = 0;
                 $suspensos = 0;
@@ -200,7 +200,7 @@
 
                 echo "<br><br>";
 
-                //Ejercicio 5.5: práctica de array + loops.
+                //Ejercicio adicional: práctica de array + loops.
                 //While:
                 echo "EJERCICIO 5.1 - PRÁCTICA DE ARRAY + LOOP WHILE";
                 echo "<br>";
@@ -311,7 +311,7 @@
                 echo "La media de las notas es: " . $media . ".";
                 echo "<br><br>";
 
-                //Ejercicio 6: práctica de array + condicionales + operadores ariméticos.
+                //Ejercicio: práctica de array + condicionales + operadores ariméticos.
                 $precioKg = array(10,11.3,1.28,4.7,2);
 
                 if ($precioKg[0] >=4) {
@@ -389,7 +389,7 @@
                 }
                 echo "<br><br>";
 
-                //Ejercicio 7: Comprobar si el año es bisiesto o no.
+                //Ejercicio: Comprobar si el año es bisiesto o no.
                 echo "EJERCICIO 7 - PRÁCTICA DE LOOPS (AÑOS BISIESTOS)";
                 echo "<br>";
 
@@ -407,7 +407,7 @@
                 }
                 echo "<br><br>";
 
-                //Ejercicio 7.1: Imprimir la lista de los 100 primeros nº pares.
+                //Ejercicio: Imprimir la lista de los 100 primeros nº pares.
                 echo "EJERCICIO 7.1 - PRÁCTICA DE LOOPS (100 PRIMEROS NÚMEROS PARES)";
                 echo "<br>";
 
@@ -454,7 +454,78 @@
                 }
                 echo "<br><br>";
 
-                //Loops: Foreach
+                // PHP strings:
+                echo strlen("Hola mundo"); //La función cuenta el número de caracteres de una cadena de texto (espacios incluidos).
+                echo "<br><br>";
+
+                echo str_word_count("Ho la Mun do"); //Cuenta el número de palabras en una cadena de texto (espacios incluidos).
+                echo "<br><br>";
+
+                echo strpos("Hola mundo", "mundo"); //Busca la posición de una subcadena dentro de una cadena de texto. Si no la encuentra, devuelve false.
+                echo "<br><br>";
+
+                $prueba = strpos("Hola mundo", "mundo"); //Busca la posición de una subcadena dentro de una cadena de texto. Si no la encuentra, devuelve false.
+                echo "Valor de prueba: " . $prueba; //Imprime el valor de la variable prueba.
+                echo var_dump($prueba); //Imprime el tipo de dato y el valor de la variable prueba.
+                echo "<br><br>";
+
+                //PHP Modify Strings:
+                $ej1 = "Hola mundo";
+                $ej2 = "HOLA MUNDO";
+                $ej3 = "   Hola mundo   ";
+                echo strtoupper($ej1); //Convierte una cadena de texto a mayúsculas.
+                echo "<br>";
+                echo strtolower($ej2); //Convierte una cadena de texto a minúsculas.
+                echo "<br><br>";
+
+                echo str_replace("mundo", "a todos", $ej1); //Reemplaza una subcadena por otra en una cadena de texto.
+                echo "<br><br>";
+
+                echo strrev($ej1); //Invierte una cadena de texto.
+                echo "<br><br>";
+
+                echo trim($ej1); //Elimina los espacios en blanco al inicio y al final de una cadena de texto.
+                echo "<br><br>";
+
+                $ej4 = explode(" ", $ej1); //Divide una cadena de texto en un array, usando un delimitador.
+                print_r($ej4); //Imprime el array resultante.
+                echo "<br><br>";
+
+                $ej5 = "Hola,que,tal,estás"; //Cadena de texto con comas.
+                $ej6 = explode(",", $ej5); //Divide la cadena de texto en un array, usando la coma como delimitador.
+                print_r($ej6); //Imprime el array resultante.
+                echo "<br><br>";
+
+                //CONCATENACIÓN DE CADENAS DE TEXTO Y VARIABLES:
+
+                $var = 23;
+                $mensaje = "El valor es: ";
+                echo $mensaje . $var; //Concatenación de cadena de texto y variable.
+                echo "<br><br>";
+
+                //SUBSTRINGS:
+                $ej7 = "Hola planeta vegetta";
+                echo substr($ej7, 5, 7); //Extrae una subcadena de una cadena de texto. (cadena, posición inicial, longitud)
+                echo "<br><br>";
+
+                $ej8 = "Willy Wonka Heredia";
+                echo substr($ej8, 6, 100); //Extrae una subcadena desde la posición 6 hasta el final.
+                echo "<br><br>";
+
+                $ej9 = "Rana Gustavo Adolfo Becquer";
+                $arrayApellido = explode(" ", $ej9); //Divide la cadena de texto en un array, usando el espacio como delimitador.
+                echo $arrayApellido[2]; //Imprime el apellido (posición 2 del array).
+                echo $arrayApellido[3]; //Imprime el apellido compuesto (posición 3 del array).
+
+                $ej10 = "Nobita Nobi Bino";
+                $posicionApellido = strrpos($ej10, "Nobi"); //Busca la posición del último espacio en la cadena de texto.
+                $apellidos = substr($ej10, $posicionApellido); //Extrae la subcadena desde la posición del último espacio hasta el final.
+                echo "<br>Los apellidos son: " . $apellidos; //Imprime los apellidos.
+
+
+
+
+
             //Fin del código de PHP.
             ?>
     </body>
